@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// Selection Sort Fonksiyonu
+// Selection Sort Function
 void selection_Sort(int A[], int n) {
     int i, temp;
 
@@ -16,7 +16,7 @@ for(int i=0; i<n-1; i++ ){
 		A[i]=A[minindis];
 		A[minindis]=temp;
 	}
-       // Her sýralama adýmýný ekrana yazdýr
+       // Prints each sorting step on the screen.
         printf(" %d. siralama: ", i + 1);
         for (int k = 0; k < n; k++)
             printf("%d, ", A[k]);
@@ -30,20 +30,20 @@ for(int i=0; i<n-1; i++ ){
 int main() {
     int n;
 
-    // Kullanýcýdan dizi boyutunu alma
+    // Get array size from user
     printf("Kac elemanli bir dizi siralamak istiyorsunuz? ");
     scanf("%d", &n);
 
     int A[n];
 
-    // Kullanýcýdan dizi elemanlarýný alma
+    // Retrieve array elements from the user
     printf("Dizi elemanlarini giriniz:\n");
     for (int i = 0; i < n; i++) {
         printf("A[%d]: ", i);
         scanf("%d", &A[i]);
     }
 
-    // Sýralama öncesi dizi
+    // array before sorting
     printf("Siralama oncesi dizi: ");
     for (int i = 0; i < n; i++)
         printf("%d, ", A[i]);
@@ -51,7 +51,7 @@ int main() {
 
     selection_Sort(A, n);
 
-    // Sýralama sonrasý dizi
+    // array after sorting
     printf("Siralama sonrasi dizi: ");
     for (int i = 0; i < n; i++)
         printf("%d, ", A[i]);
