@@ -1,6 +1,5 @@
 #include <stdio.h>
-
-// Mevcut Insertion Sort fonksiyonu 
+// Available Insert Sort Function
 void insertion_Sort(int A[], int n) {
 int i,j,k,temp;
 	
@@ -14,32 +13,26 @@ int i,j,k,temp;
 	A[j+1]=temp;
 }
 for(k=0; k<n; k++){
-	printf("%d ", A[k]); // Sýralanmýþ diziyi gösterir. 
+	printf("%d ", A[k]); // SÃ½ralanmÃ½Ã¾ diziyi gÃ¶sterir. 
 }
 }
 int main() {
     int n, i;
-
-    // Kullanýcýdan dizi boyutunu ve elemanlarýný alma
+    // Gets array size and elements from the user 
     printf("Kac elemanli bir dizi siralamak istiyorsunuz? ");
     scanf("%d", &n);
-
     int A[n];
-    printf("Dizi elemanlarýný giriniz:\n");
+    printf("Dizi elemanlarÃ½nÃ½ giriniz:\n");
     for (i = 0; i < n; i++) {
         printf("A[%d]: ", i);
         scanf("%d", &A[i]);
     }
-
-    // Sýralama öncesi dizi
-    printf("Siralama öncesi dizi: ");
+    // Array before sorting
+    printf("Siralama Ã¶ncesi dizi: ");
     for (i = 0; i < n; i++)
         printf("%d, ", A[i]);
     printf("\n");
-
-    // Insertion Sort ile sýralama
+    // Sorting with insertion sort
     printf("Siralama islemi basliyor...\n");
     insertion_Sort(A, n);
-    
 }
-
