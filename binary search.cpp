@@ -10,7 +10,7 @@ int binary_search(int a[], int ara, int sol, int sag){
 	else
 	return binary_search (a,ara,mid+1,sag);
 }
-void dizi_sirala(int a[], int n ){ // Array soryted with Selection sort 
+void dizi_sirala(int a[], int n ){ // Array sorted with Selection Sort 
 	int i , temp ; 
 	
 	for(i = 0; i<n-1; i++){
