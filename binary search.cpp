@@ -1,5 +1,5 @@
 #include<stdio.h>
-
+//sol= left, sag= right, ara=call 
 int binary_search(int a[], int ara, int sol, int sag){
 	int mid= sol+(sag-sol)/2;
 	if(a[mid]== ara )
@@ -10,7 +10,7 @@ int binary_search(int a[], int ara, int sol, int sag){
 	else
 	return binary_search (a,ara,mid+1,sag);
 }
-void dizi_sirala(int a[], int n ){
+void dizi_sirala(int a[], int n ){ // Array soryted with Selection sort 
 	int i , temp ; 
 	
 	for(i = 0; i<n-1; i++){
@@ -35,10 +35,10 @@ void dizi_sirala(int a[], int n ){
 
 int main( ){
 	int n,ara;
-	printf("Kac boyutlu dizin:");
+	printf("What is the size of the array? ");
 	scanf("%d",&n);
 	int a[n];
-	printf(" Hangi degeri aricaksin:");
+	printf(" What value will you look for? ");
 	scanf( "%d",&ara);
 	for(int i=0; i<n; i++){
 		printf("a[%d]: " , i); 
